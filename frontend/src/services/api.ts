@@ -38,10 +38,15 @@ export const getLearningPlan = async (params: {
   return response.json();
 };
 
-const authHeaders = () => {
-  const token =
-    typeof window !== "undefined" ? localStorage.getItem("token") : null;
-  return token ? { Authorization: `Bearer ${token}` } : {};
+const authHeaders = (): HeadersInit => {
+  if (typeof window === "undefined") return {};
+
+  const token = localStorage.getItem("token");
+  if (!token) return {};
+
+  return {
+    Authorization: `Bearer ${token}`,
+  };
 };
 
 export const register = async (data: {
@@ -70,8 +75,11 @@ export const login = async (data: { email: string; password: string }) => {
 
 export const getProfile = async () => {
   const res = await fetch(`${baseURL}/auth/me`, {
-    headers: { ...authHeaders() },
+    headers: {
+      ...authHeaders(),
+    },
   });
+
   if (!res.ok) throw new Error("Failed to fetch profile");
   return res.json();
 };
@@ -86,10 +94,11 @@ export const submitQuiz = async (data: {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      ...authHeaders(),
+      ...authHeaders(), // ← ya NO produce undefined
     },
     body: JSON.stringify(data),
   });
+
   if (!response.ok) throw new Error("Failed to submit quiz");
   return response.json();
 };
