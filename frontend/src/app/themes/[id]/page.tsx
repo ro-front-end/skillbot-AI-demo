@@ -58,10 +58,11 @@ export default function ThemesPage() {
       <Header />
 
       <div className="pt-32 pb-12 px-6">
+        <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="max-w-7xl mx-auto"
+          transition={{ duration: 0.5 }}
         >
           <button
             onClick={() => router.back()}
@@ -73,11 +74,12 @@ export default function ThemesPage() {
 
           {loading ? (
             <div className="flex justify-center items-center h-64">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-12 h-12 border-4 border-purple border-t-purple-light rounded-full"
-              />
+              <div className="w-12 h-12 border-4 border-purple border-t-purple-light rounded-full">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+              </div>
             </div>
           ) : theme ? (
             <>
@@ -91,11 +93,11 @@ export default function ThemesPage() {
                 </p>
               </div>
 
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
               >
                 {quizzes.map((quiz) => (
                   <motion.div
@@ -115,6 +117,7 @@ export default function ThemesPage() {
             <div className="text-center text-gray-400">Theme not found</div>
           )}
         </motion.div>
+        </div>
       </div>
     </main>
   );
