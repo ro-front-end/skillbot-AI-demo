@@ -64,60 +64,60 @@ export default function ThemesPage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-          <button
-            onClick={() => router.back()}
-            className="mb-8 px-4 py-2 bg-purple/20 border border-purple border-opacity-50 rounded-lg hover:bg-purple/30 transition-colors flex items-center space-x-2"
-          >
-            <span>←</span>
-            <span>Back to Themes</span>
-          </button>
+            <button
+              onClick={() => router.back()}
+              className="mb-8 px-4 py-2 bg-purple/20 border border-purple border-opacity-50 rounded-lg hover:bg-purple/30 transition-colors flex items-center space-x-2"
+            >
+              <span>←</span>
+              <span>Back to Themes</span>
+            </button>
 
-          {loading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="w-12 h-12 border-4 border-purple border-t-purple-light rounded-full">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-              </div>
-            </div>
-          ) : theme ? (
-            <>
-              <div className="mb-12">
-                <div className="text-6xl mb-4">{theme.icon}</div>
-                <h1 className="text-5xl font-bold mb-2 gradient-text">
-                  {theme.name}
-                </h1>
-                <p className="text-gray-400 text-lg">
-                  {quizzes.length} quizzes available
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
-              >
-                {quizzes.map((quiz) => (
+            {loading ? (
+              <div className="flex justify-center items-center h-64">
+                <div className="w-12 h-12 border-4 border-purple border-t-purple-light rounded-full">
                   <motion.div
-                    key={quiz._id}
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                  >
-                    <QuizCard
-                      quiz={quiz}
-                      onClick={() => handleQuizClick(quiz._id)}
-                    />
-                  </motion.div>
-                ))}
-              </motion.div>
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  />
+                </div>
               </div>
-            </>
-          ) : (
-            <div className="text-center text-gray-400">Theme not found</div>
-          )}
-        </motion.div>
+            ) : theme ? (
+              <>
+                <div className="mb-12">
+                  <div className="text-6xl mb-4">{theme.icon}</div>
+                  <h1 className="text-5xl font-bold mb-2 gradient-text">
+                    {theme.name}
+                  </h1>
+                  <p className="text-gray-400 text-lg">
+                    {quizzes.length} quizzes available
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
+                  >
+                    {quizzes.map((quiz) => (
+                      <motion.div
+                        key={quiz._id}
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                      >
+                        <QuizCard
+                          quiz={quiz}
+                          onClick={() => handleQuizClick(quiz._id)}
+                        />
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </div>
+              </>
+            ) : (
+              <div className="text-center text-gray-400">Theme not found</div>
+            )}
+          </motion.div>
         </div>
       </div>
     </main>

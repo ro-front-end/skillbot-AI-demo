@@ -26,12 +26,13 @@ export function ProgressBar({ current, total }: ProgressBarProps) {
         </span>
       </div>
       <div className="w-full bg-darker rounded-full h-2 border border-purple border-opacity-30">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.5 }}
-          className="h-full bg-gradient-to-r from-purple to-purple-light rounded-full"
-        />
+        <div className="h-full bg-gradient-to-r from-purple to-purple-light rounded-full">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
       </div>
     </div>
   );

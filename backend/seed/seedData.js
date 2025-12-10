@@ -377,435 +377,577 @@ const seedData = async () => {
 
         // Curated question banks per theme and difficulty
         const curated = {
-                    "Art": {
-                                  medium: [
-                                    {
-                                      text: "Which artist is known for the painting 'The Persistence of Memory'?",
-                                      options: [
-                                        { id: "a", text: "Salvador Dalí", isCorrect: true },
-                                        { id: "b", text: "Henri Matisse", isCorrect: false },
-                                        { id: "c", text: "Jackson Pollock", isCorrect: false },
-                                        { id: "d", text: "Edvard Munch", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which period is Michelangelo associated with?",
-                                      options: [
-                                        { id: "a", text: "Renaissance", isCorrect: true },
-                                        { id: "b", text: "Baroque", isCorrect: false },
-                                        { id: "c", text: "Modernism", isCorrect: false },
-                                        { id: "d", text: "Romanticism", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which artist is famous for the 'Campbell's Soup Cans' series?",
-                                      options: [
-                                        { id: "a", text: "Andy Warhol", isCorrect: true },
-                                        { id: "b", text: "Roy Lichtenstein", isCorrect: false },
-                                        { id: "c", text: "Keith Haring", isCorrect: false },
-                                        { id: "d", text: "Jean-Michel Basquiat", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which technique uses small dots of color to create an image?",
-                                      options: [
-                                        { id: "a", text: "Pointillism", isCorrect: true },
-                                        { id: "b", text: "Cubism", isCorrect: false },
-                                        { id: "c", text: "Fresco", isCorrect: false },
-                                        { id: "d", text: "Sfumato", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Who painted the ceiling of the Sistine Chapel?",
-                                      options: [
-                                        { id: "a", text: "Michelangelo", isCorrect: true },
-                                        { id: "b", text: "Raphael", isCorrect: false },
-                                        { id: "c", text: "Donatello", isCorrect: false },
-                                        { id: "d", text: "Caravaggio", isCorrect: false },
-                                      ],
-                                    },
-                                  ],
-                                  hard: [
-                                    {
-                                      text: "Which artist is credited with inventing linear perspective?",
-                                      options: [
-                                        { id: "a", text: "Filippo Brunelleschi", isCorrect: true },
-                                        { id: "b", text: "Leonardo da Vinci", isCorrect: false },
-                                        { id: "c", text: "Albrecht Dürer", isCorrect: false },
-                                        { id: "d", text: "Sandro Botticelli", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which painting technique involves applying paint thickly so that brush or palette knife marks are visible?",
-                                      options: [
-                                        { id: "a", text: "Impasto", isCorrect: true },
-                                        { id: "b", text: "Glazing", isCorrect: false },
-                                        { id: "c", text: "Sgraffito", isCorrect: false },
-                                        { id: "d", text: "Encaustic", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which artist is known for the mural 'Guernica'?",
-                                      options: [
-                                        { id: "a", text: "Pablo Picasso", isCorrect: true },
-                                        { id: "b", text: "Diego Rivera", isCorrect: false },
-                                        { id: "c", text: "Joan Miró", isCorrect: false },
-                                        { id: "d", text: "Henri Rousseau", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which movement is Kazimir Malevich associated with?",
-                                      options: [
-                                        { id: "a", text: "Suprematism", isCorrect: true },
-                                        { id: "b", text: "Futurism", isCorrect: false },
-                                        { id: "c", text: "Dadaism", isCorrect: false },
-                                        { id: "d", text: "Constructivism", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which artist created the sculpture 'David'?",
-                                      options: [
-                                        { id: "a", text: "Michelangelo", isCorrect: true },
-                                        { id: "b", text: "Gian Lorenzo Bernini", isCorrect: false },
-                                        { id: "c", text: "Donatello", isCorrect: false },
-                                        { id: "d", text: "Auguste Rodin", isCorrect: false },
-                                      ],
-                                    },
-                                  ],
-                      easy: [
-                        {
-                          text: "Who painted the Mona Lisa?",
-                          options: [
-                            { id: "a", text: "Leonardo da Vinci", isCorrect: true },
-                            { id: "b", text: "Vincent van Gogh", isCorrect: false },
-                            { id: "c", text: "Pablo Picasso", isCorrect: false },
-                            { id: "d", text: "Claude Monet", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "Which art movement is Salvador Dalí associated with?",
-                          options: [
-                            { id: "a", text: "Surrealism", isCorrect: true },
-                            { id: "b", text: "Impressionism", isCorrect: false },
-                            { id: "c", text: "Cubism", isCorrect: false },
-                            { id: "d", text: "Baroque", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "What is the primary medium of sculpture?",
-                          options: [
-                            { id: "a", text: "Clay, stone, or metal", isCorrect: true },
-                            { id: "b", text: "Watercolor", isCorrect: false },
-                            { id: "c", text: "Acrylic", isCorrect: false },
-                            { id: "d", text: "Charcoal", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "Which artist is famous for cutting off his own ear?",
-                          options: [
-                            { id: "a", text: "Vincent van Gogh", isCorrect: true },
-                            { id: "b", text: "Michelangelo", isCorrect: false },
-                            { id: "c", text: "Rembrandt", isCorrect: false },
-                            { id: "d", text: "Andy Warhol", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "The Starry Night is a painting by which artist?",
-                          options: [
-                            { id: "a", text: "Vincent van Gogh", isCorrect: true },
-                            { id: "b", text: "Claude Monet", isCorrect: false },
-                            { id: "c", text: "Edvard Munch", isCorrect: false },
-                            { id: "d", text: "Paul Cézanne", isCorrect: false },
-                          ],
-                        },
-                      ],
-                    },
-                    "Biology": {
-                                  medium: [
-                                    {
-                                      text: "What is the genetic material in most living organisms?",
-                                      options: [
-                                        { id: "a", text: "DNA", isCorrect: true },
-                                        { id: "b", text: "RNA", isCorrect: false },
-                                        { id: "c", text: "Protein", isCorrect: false },
-                                        { id: "d", text: "Lipid", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which process produces gametes?",
-                                      options: [
-                                        { id: "a", text: "Meiosis", isCorrect: true },
-                                        { id: "b", text: "Mitosis", isCorrect: false },
-                                        { id: "c", text: "Fertilization", isCorrect: false },
-                                        { id: "d", text: "Replication", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which kingdom do mushrooms belong to?",
-                                      options: [
-                                        { id: "a", text: "Fungi", isCorrect: true },
-                                        { id: "b", text: "Plantae", isCorrect: false },
-                                        { id: "c", text: "Animalia", isCorrect: false },
-                                        { id: "d", text: "Protista", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the main function of red blood cells?",
-                                      options: [
-                                        { id: "a", text: "Transport oxygen", isCorrect: true },
-                                        { id: "b", text: "Fight infection", isCorrect: false },
-                                        { id: "c", text: "Clot blood", isCorrect: false },
-                                        { id: "d", text: "Produce hormones", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which organ system includes the brain and spinal cord?",
-                                      options: [
-                                        { id: "a", text: "Nervous system", isCorrect: true },
-                                        { id: "b", text: "Digestive system", isCorrect: false },
-                                        { id: "c", text: "Respiratory system", isCorrect: false },
-                                        { id: "d", text: "Circulatory system", isCorrect: false },
-                                      ],
-                                    },
-                                  ],
-                                  hard: [
-                                    {
-                                      text: "What is the powerhouse of the cell?",
-                                      options: [
-                                        { id: "a", text: "Mitochondria", isCorrect: true },
-                                        { id: "b", text: "Nucleus", isCorrect: false },
-                                        { id: "c", text: "Ribosome", isCorrect: false },
-                                        { id: "d", text: "Golgi apparatus", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which molecule carries genetic instructions from DNA to the ribosome?",
-                                      options: [
-                                        { id: "a", text: "mRNA", isCorrect: true },
-                                        { id: "b", text: "tRNA", isCorrect: false },
-                                        { id: "c", text: "rRNA", isCorrect: false },
-                                        { id: "d", text: "DNA polymerase", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the process by which plants lose water vapor through their leaves?",
-                                      options: [
-                                        { id: "a", text: "Transpiration", isCorrect: true },
-                                        { id: "b", text: "Respiration", isCorrect: false },
-                                        { id: "c", text: "Photosynthesis", isCorrect: false },
-                                        { id: "d", text: "Germination", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "Which scientist is known as the father of modern genetics?",
-                                      options: [
-                                        { id: "a", text: "Gregor Mendel", isCorrect: true },
-                                        { id: "b", text: "Charles Darwin", isCorrect: false },
-                                        { id: "c", text: "Louis Pasteur", isCorrect: false },
-                                        { id: "d", text: "James Watson", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the largest organ in the human body?",
-                                      options: [
-                                        { id: "a", text: "Skin", isCorrect: true },
-                                        { id: "b", text: "Liver", isCorrect: false },
-                                        { id: "c", text: "Lung", isCorrect: false },
-                                        { id: "d", text: "Heart", isCorrect: false },
-                                      ],
-                                    },
-                                  ],
-                      easy: [
-                        {
-                          text: "What is the basic unit of life?",
-                          options: [
-                            { id: "a", text: "Cell", isCorrect: true },
-                            { id: "b", text: "Atom", isCorrect: false },
-                            { id: "c", text: "Molecule", isCorrect: false },
-                            { id: "d", text: "Organ", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "Which organ pumps blood throughout the body?",
-                          options: [
-                            { id: "a", text: "Heart", isCorrect: true },
-                            { id: "b", text: "Liver", isCorrect: false },
-                            { id: "c", text: "Lung", isCorrect: false },
-                            { id: "d", text: "Kidney", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "What gas do plants absorb from the atmosphere?",
-                          options: [
-                            { id: "a", text: "Carbon dioxide", isCorrect: true },
-                            { id: "b", text: "Oxygen", isCorrect: false },
-                            { id: "c", text: "Nitrogen", isCorrect: false },
-                            { id: "d", text: "Hydrogen", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "Which organelle is known as the powerhouse of the cell?",
-                          options: [
-                            { id: "a", text: "Mitochondria", isCorrect: true },
-                            { id: "b", text: "Nucleus", isCorrect: false },
-                            { id: "c", text: "Ribosome", isCorrect: false },
-                            { id: "d", text: "Chloroplast", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "What is the process by which plants make their food?",
-                          options: [
-                            { id: "a", text: "Photosynthesis", isCorrect: true },
-                            { id: "b", text: "Respiration", isCorrect: false },
-                            { id: "c", text: "Digestion", isCorrect: false },
-                            { id: "d", text: "Fermentation", isCorrect: false },
-                          ],
-                        },
-                      ],
-                    },
-                    "World Capitals": {
-                                  medium: [
-                                    {
-                                      text: "What is the capital of Egypt?",
-                                      options: [
-                                        { id: "a", text: "Cairo", isCorrect: true },
-                                        { id: "b", text: "Alexandria", isCorrect: false },
-                                        { id: "c", text: "Giza", isCorrect: false },
-                                        { id: "d", text: "Luxor", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the capital of South Africa?",
-                                      options: [
-                                        { id: "a", text: "Pretoria", isCorrect: true },
-                                        { id: "b", text: "Cape Town", isCorrect: false },
-                                        { id: "c", text: "Johannesburg", isCorrect: false },
-                                        { id: "d", text: "Durban", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the capital of Turkey?",
-                                      options: [
-                                        { id: "a", text: "Ankara", isCorrect: true },
-                                        { id: "b", text: "Istanbul", isCorrect: false },
-                                        { id: "c", text: "Izmir", isCorrect: false },
-                                        { id: "d", text: "Antalya", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the capital of India?",
-                                      options: [
-                                        { id: "a", text: "New Delhi", isCorrect: true },
-                                        { id: "b", text: "Mumbai", isCorrect: false },
-                                        { id: "c", text: "Bangalore", isCorrect: false },
-                                        { id: "d", text: "Chennai", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the capital of Russia?",
-                                      options: [
-                                        { id: "a", text: "Moscow", isCorrect: true },
-                                        { id: "b", text: "Saint Petersburg", isCorrect: false },
-                                        { id: "c", text: "Kazan", isCorrect: false },
-                                        { id: "d", text: "Sochi", isCorrect: false },
-                                      ],
-                                    },
-                                  ],
-                                  hard: [
-                                    {
-                                      text: "What is the capital of Kazakhstan?",
-                                      options: [
-                                        { id: "a", text: "Astana (Nur-Sultan)", isCorrect: true },
-                                        { id: "b", text: "Almaty", isCorrect: false },
-                                        { id: "c", text: "Shymkent", isCorrect: false },
-                                        { id: "d", text: "Aktobe", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the capital of New Zealand?",
-                                      options: [
-                                        { id: "a", text: "Wellington", isCorrect: true },
-                                        { id: "b", text: "Auckland", isCorrect: false },
-                                        { id: "c", text: "Christchurch", isCorrect: false },
-                                        { id: "d", text: "Hamilton", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the capital of Nigeria?",
-                                      options: [
-                                        { id: "a", text: "Abuja", isCorrect: true },
-                                        { id: "b", text: "Lagos", isCorrect: false },
-                                        { id: "c", text: "Kano", isCorrect: false },
-                                        { id: "d", text: "Ibadan", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the capital of Switzerland?",
-                                      options: [
-                                        { id: "a", text: "Bern", isCorrect: true },
-                                        { id: "b", text: "Zurich", isCorrect: false },
-                                        { id: "c", text: "Geneva", isCorrect: false },
-                                        { id: "d", text: "Basel", isCorrect: false },
-                                      ],
-                                    },
-                                    {
-                                      text: "What is the capital of Saudi Arabia?",
-                                      options: [
-                                        { id: "a", text: "Riyadh", isCorrect: true },
-                                        { id: "b", text: "Jeddah", isCorrect: false },
-                                        { id: "c", text: "Mecca", isCorrect: false },
-                                        { id: "d", text: "Dammam", isCorrect: false },
-                                      ],
-                                    },
-                                  ],
-                      easy: [
-                        {
-                          text: "What is the capital of France?",
-                          options: [
-                            { id: "a", text: "Paris", isCorrect: true },
-                            { id: "b", text: "Rome", isCorrect: false },
-                            { id: "c", text: "Berlin", isCorrect: false },
-                            { id: "d", text: "Madrid", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "What is the capital of Japan?",
-                          options: [
-                            { id: "a", text: "Tokyo", isCorrect: true },
-                            { id: "b", text: "Beijing", isCorrect: false },
-                            { id: "c", text: "Seoul", isCorrect: false },
-                            { id: "d", text: "Bangkok", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "What is the capital of Australia?",
-                          options: [
-                            { id: "a", text: "Canberra", isCorrect: true },
-                            { id: "b", text: "Sydney", isCorrect: false },
-                            { id: "c", text: "Melbourne", isCorrect: false },
-                            { id: "d", text: "Brisbane", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "What is the capital of Canada?",
-                          options: [
-                            { id: "a", text: "Ottawa", isCorrect: true },
-                            { id: "b", text: "Toronto", isCorrect: false },
-                            { id: "c", text: "Vancouver", isCorrect: false },
-                            { id: "d", text: "Montreal", isCorrect: false },
-                          ],
-                        },
-                        {
-                          text: "What is the capital of Brazil?",
-                          options: [
-                            { id: "a", text: "Brasília", isCorrect: true },
-                            { id: "b", text: "Rio de Janeiro", isCorrect: false },
-                            { id: "c", text: "São Paulo", isCorrect: false },
-                            { id: "d", text: "Salvador", isCorrect: false },
-                          ],
-                        },
-                      ],
-                    },
+          Programming: {
+            easy: [
+              {
+                text: "What is a variable in programming?",
+                options: [
+                  { id: "a", text: "A named container for storing data", isCorrect: true },
+                  { id: "b", text: "A function that performs calculations", isCorrect: false },
+                  { id: "c", text: "A type of loop", isCorrect: false },
+                  { id: "d", text: "A way to comment code", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which of these is a primitive data type?",
+                options: [
+                  { id: "a", text: "Integer", isCorrect: true },
+                  { id: "b", text: "Array", isCorrect: false },
+                  { id: "c", text: "Object", isCorrect: false },
+                  { id: "d", text: "Function", isCorrect: false },
+                ],
+              },
+              {
+                text: "What does an if statement do?",
+                options: [
+                  { id: "a", text: "Executes code based on a condition", isCorrect: true },
+                  { id: "b", text: "Repeats code multiple times", isCorrect: false },
+                  { id: "c", text: "Declares a variable", isCorrect: false },
+                  { id: "d", text: "Imports a library", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is a function?",
+                options: [
+                  { id: "a", text: "A reusable block of code", isCorrect: true },
+                  { id: "b", text: "A type of variable", isCorrect: false },
+                  { id: "c", text: "A loop statement", isCorrect: false },
+                  { id: "d", text: "A data structure", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which operator is used for addition?",
+                options: [
+                  { id: "a", text: "+", isCorrect: true },
+                  { id: "b", text: "-", isCorrect: false },
+                  { id: "c", text: "*", isCorrect: false },
+                  { id: "d", text: "/", isCorrect: false },
+                ],
+              },
+            ],
+            medium: [
+              {
+                text: "What is the time complexity of binary search?",
+                options: [
+                  { id: "a", text: "O(log n)", isCorrect: true },
+                  { id: "b", text: "O(n)", isCorrect: false },
+                  { id: "c", text: "O(n²)", isCorrect: false },
+                  { id: "d", text: "O(1)", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is an algorithm?",
+                options: [
+                  { id: "a", text: "Step-by-step procedure to solve a problem", isCorrect: true },
+                  { id: "b", text: "A type of data structure", isCorrect: false },
+                  { id: "c", text: "A programming language", isCorrect: false },
+                  { id: "d", text: "A debugging tool", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which data structure uses LIFO (Last In First Out)?",
+                options: [
+                  { id: "a", text: "Stack", isCorrect: true },
+                  { id: "b", text: "Queue", isCorrect: false },
+                  { id: "c", text: "Array", isCorrect: false },
+                  { id: "d", text: "Tree", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is recursion?",
+                options: [
+                  { id: "a", text: "A function calling itself", isCorrect: true },
+                  { id: "b", text: "A loop that repeats", isCorrect: false },
+                  { id: "c", text: "A type of variable", isCorrect: false },
+                  { id: "d", text: "An array of arrays", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the purpose of version control?",
+                options: [
+                  { id: "a", text: "Track changes to code over time", isCorrect: true },
+                  { id: "b", text: "Compile code to binary", isCorrect: false },
+                  { id: "c", text: "Debug errors automatically", isCorrect: false },
+                  { id: "d", text: "Optimize code performance", isCorrect: false },
+                ],
+              },
+            ],
+            hard: [
+              {
+                text: "What is a memory leak?",
+                options: [
+                  { id: "a", text: "When allocated memory is not properly freed", isCorrect: true },
+                  { id: "b", text: "When code runs too slowly", isCorrect: false },
+                  { id: "c", text: "When a loop never terminates", isCorrect: false },
+                  { id: "d", text: "When a variable is not declared", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which sorting algorithm has O(n log n) time complexity in average case?",
+                options: [
+                  { id: "a", text: "Merge Sort", isCorrect: true },
+                  { id: "b", text: "Bubble Sort", isCorrect: false },
+                  { id: "c", text: "Insertion Sort", isCorrect: false },
+                  { id: "d", text: "Selection Sort", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is polymorphism in OOP?",
+                options: [
+                  { id: "a", text: "The ability of objects to take multiple forms", isCorrect: true },
+                  { id: "b", text: "Inheritance from multiple classes", isCorrect: false },
+                  { id: "c", text: "Creating multiple functions", isCorrect: false },
+                  { id: "d", text: "Using many data types", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is a deadlock in concurrent programming?",
+                options: [
+                  { id: "a", text: "When threads wait indefinitely for each other", isCorrect: true },
+                  { id: "b", text: "When code does not compile", isCorrect: false },
+                  { id: "c", text: "When a loop runs infinitely", isCorrect: false },
+                  { id: "d", text: "When memory is exhausted", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is Big O notation used for?",
+                options: [
+                  { id: "a", text: "Analyzing algorithm time and space complexity", isCorrect: true },
+                  { id: "b", text: "Writing code comments", isCorrect: false },
+                  { id: "c", text: "Debugging errors", isCorrect: false },
+                  { id: "d", text: "Formatting code", isCorrect: false },
+                ],
+              },
+            ],
+          },
+            medium: [
+              {
+                text: "Which artist is known for the painting 'The Persistence of Memory'?",
+                options: [
+                  { id: "a", text: "Salvador Dalí", isCorrect: true },
+                  { id: "b", text: "Henri Matisse", isCorrect: false },
+                  { id: "c", text: "Jackson Pollock", isCorrect: false },
+                  { id: "d", text: "Edvard Munch", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which period is Michelangelo associated with?",
+                options: [
+                  { id: "a", text: "Renaissance", isCorrect: true },
+                  { id: "b", text: "Baroque", isCorrect: false },
+                  { id: "c", text: "Modernism", isCorrect: false },
+                  { id: "d", text: "Romanticism", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which artist is famous for the 'Campbell's Soup Cans' series?",
+                options: [
+                  { id: "a", text: "Andy Warhol", isCorrect: true },
+                  { id: "b", text: "Roy Lichtenstein", isCorrect: false },
+                  { id: "c", text: "Keith Haring", isCorrect: false },
+                  { id: "d", text: "Jean-Michel Basquiat", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which technique uses small dots of color to create an image?",
+                options: [
+                  { id: "a", text: "Pointillism", isCorrect: true },
+                  { id: "b", text: "Cubism", isCorrect: false },
+                  { id: "c", text: "Fresco", isCorrect: false },
+                  { id: "d", text: "Sfumato", isCorrect: false },
+                ],
+              },
+              {
+                text: "Who painted the ceiling of the Sistine Chapel?",
+                options: [
+                  { id: "a", text: "Michelangelo", isCorrect: true },
+                  { id: "b", text: "Raphael", isCorrect: false },
+                  { id: "c", text: "Donatello", isCorrect: false },
+                  { id: "d", text: "Caravaggio", isCorrect: false },
+                ],
+              },
+            ],
+            hard: [
+              {
+                text: "Which artist is credited with inventing linear perspective?",
+                options: [
+                  { id: "a", text: "Filippo Brunelleschi", isCorrect: true },
+                  { id: "b", text: "Leonardo da Vinci", isCorrect: false },
+                  { id: "c", text: "Albrecht Dürer", isCorrect: false },
+                  { id: "d", text: "Sandro Botticelli", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which painting technique involves applying paint thickly so that brush or palette knife marks are visible?",
+                options: [
+                  { id: "a", text: "Impasto", isCorrect: true },
+                  { id: "b", text: "Glazing", isCorrect: false },
+                  { id: "c", text: "Sgraffito", isCorrect: false },
+                  { id: "d", text: "Encaustic", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which artist is known for the mural 'Guernica'?",
+                options: [
+                  { id: "a", text: "Pablo Picasso", isCorrect: true },
+                  { id: "b", text: "Diego Rivera", isCorrect: false },
+                  { id: "c", text: "Joan Miró", isCorrect: false },
+                  { id: "d", text: "Henri Rousseau", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which movement is Kazimir Malevich associated with?",
+                options: [
+                  { id: "a", text: "Suprematism", isCorrect: true },
+                  { id: "b", text: "Futurism", isCorrect: false },
+                  { id: "c", text: "Dadaism", isCorrect: false },
+                  { id: "d", text: "Constructivism", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which artist created the sculpture 'David'?",
+                options: [
+                  { id: "a", text: "Michelangelo", isCorrect: true },
+                  { id: "b", text: "Gian Lorenzo Bernini", isCorrect: false },
+                  { id: "c", text: "Donatello", isCorrect: false },
+                  { id: "d", text: "Auguste Rodin", isCorrect: false },
+                ],
+              },
+            ],
+            easy: [
+              {
+                text: "Who painted the Mona Lisa?",
+                options: [
+                  { id: "a", text: "Leonardo da Vinci", isCorrect: true },
+                  { id: "b", text: "Vincent van Gogh", isCorrect: false },
+                  { id: "c", text: "Pablo Picasso", isCorrect: false },
+                  { id: "d", text: "Claude Monet", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which art movement is Salvador Dalí associated with?",
+                options: [
+                  { id: "a", text: "Surrealism", isCorrect: true },
+                  { id: "b", text: "Impressionism", isCorrect: false },
+                  { id: "c", text: "Cubism", isCorrect: false },
+                  { id: "d", text: "Baroque", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the primary medium of sculpture?",
+                options: [
+                  { id: "a", text: "Clay, stone, or metal", isCorrect: true },
+                  { id: "b", text: "Watercolor", isCorrect: false },
+                  { id: "c", text: "Acrylic", isCorrect: false },
+                  { id: "d", text: "Charcoal", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which artist is famous for cutting off his own ear?",
+                options: [
+                  { id: "a", text: "Vincent van Gogh", isCorrect: true },
+                  { id: "b", text: "Michelangelo", isCorrect: false },
+                  { id: "c", text: "Rembrandt", isCorrect: false },
+                  { id: "d", text: "Andy Warhol", isCorrect: false },
+                ],
+              },
+              {
+                text: "The Starry Night is a painting by which artist?",
+                options: [
+                  { id: "a", text: "Vincent van Gogh", isCorrect: true },
+                  { id: "b", text: "Claude Monet", isCorrect: false },
+                  { id: "c", text: "Edvard Munch", isCorrect: false },
+                  { id: "d", text: "Paul Cézanne", isCorrect: false },
+                ],
+              },
+            ],
+          },
+          Biology: {
+            medium: [
+              {
+                text: "What is the genetic material in most living organisms?",
+                options: [
+                  { id: "a", text: "DNA", isCorrect: true },
+                  { id: "b", text: "RNA", isCorrect: false },
+                  { id: "c", text: "Protein", isCorrect: false },
+                  { id: "d", text: "Lipid", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which process produces gametes?",
+                options: [
+                  { id: "a", text: "Meiosis", isCorrect: true },
+                  { id: "b", text: "Mitosis", isCorrect: false },
+                  { id: "c", text: "Fertilization", isCorrect: false },
+                  { id: "d", text: "Replication", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which kingdom do mushrooms belong to?",
+                options: [
+                  { id: "a", text: "Fungi", isCorrect: true },
+                  { id: "b", text: "Plantae", isCorrect: false },
+                  { id: "c", text: "Animalia", isCorrect: false },
+                  { id: "d", text: "Protista", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the main function of red blood cells?",
+                options: [
+                  { id: "a", text: "Transport oxygen", isCorrect: true },
+                  { id: "b", text: "Fight infection", isCorrect: false },
+                  { id: "c", text: "Clot blood", isCorrect: false },
+                  { id: "d", text: "Produce hormones", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which organ system includes the brain and spinal cord?",
+                options: [
+                  { id: "a", text: "Nervous system", isCorrect: true },
+                  { id: "b", text: "Digestive system", isCorrect: false },
+                  { id: "c", text: "Respiratory system", isCorrect: false },
+                  { id: "d", text: "Circulatory system", isCorrect: false },
+                ],
+              },
+            ],
+            hard: [
+              {
+                text: "What is the powerhouse of the cell?",
+                options: [
+                  { id: "a", text: "Mitochondria", isCorrect: true },
+                  { id: "b", text: "Nucleus", isCorrect: false },
+                  { id: "c", text: "Ribosome", isCorrect: false },
+                  { id: "d", text: "Golgi apparatus", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which molecule carries genetic instructions from DNA to the ribosome?",
+                options: [
+                  { id: "a", text: "mRNA", isCorrect: true },
+                  { id: "b", text: "tRNA", isCorrect: false },
+                  { id: "c", text: "rRNA", isCorrect: false },
+                  { id: "d", text: "DNA polymerase", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the process by which plants lose water vapor through their leaves?",
+                options: [
+                  { id: "a", text: "Transpiration", isCorrect: true },
+                  { id: "b", text: "Respiration", isCorrect: false },
+                  { id: "c", text: "Photosynthesis", isCorrect: false },
+                  { id: "d", text: "Germination", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which scientist is known as the father of modern genetics?",
+                options: [
+                  { id: "a", text: "Gregor Mendel", isCorrect: true },
+                  { id: "b", text: "Charles Darwin", isCorrect: false },
+                  { id: "c", text: "Louis Pasteur", isCorrect: false },
+                  { id: "d", text: "James Watson", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the largest organ in the human body?",
+                options: [
+                  { id: "a", text: "Skin", isCorrect: true },
+                  { id: "b", text: "Liver", isCorrect: false },
+                  { id: "c", text: "Lung", isCorrect: false },
+                  { id: "d", text: "Heart", isCorrect: false },
+                ],
+              },
+            ],
+            easy: [
+              {
+                text: "What is the basic unit of life?",
+                options: [
+                  { id: "a", text: "Cell", isCorrect: true },
+                  { id: "b", text: "Atom", isCorrect: false },
+                  { id: "c", text: "Molecule", isCorrect: false },
+                  { id: "d", text: "Organ", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which organ pumps blood throughout the body?",
+                options: [
+                  { id: "a", text: "Heart", isCorrect: true },
+                  { id: "b", text: "Liver", isCorrect: false },
+                  { id: "c", text: "Lung", isCorrect: false },
+                  { id: "d", text: "Kidney", isCorrect: false },
+                ],
+              },
+              {
+                text: "What gas do plants absorb from the atmosphere?",
+                options: [
+                  { id: "a", text: "Carbon dioxide", isCorrect: true },
+                  { id: "b", text: "Oxygen", isCorrect: false },
+                  { id: "c", text: "Nitrogen", isCorrect: false },
+                  { id: "d", text: "Hydrogen", isCorrect: false },
+                ],
+              },
+              {
+                text: "Which organelle is known as the powerhouse of the cell?",
+                options: [
+                  { id: "a", text: "Mitochondria", isCorrect: true },
+                  { id: "b", text: "Nucleus", isCorrect: false },
+                  { id: "c", text: "Ribosome", isCorrect: false },
+                  { id: "d", text: "Chloroplast", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the process by which plants make their food?",
+                options: [
+                  { id: "a", text: "Photosynthesis", isCorrect: true },
+                  { id: "b", text: "Respiration", isCorrect: false },
+                  { id: "c", text: "Digestion", isCorrect: false },
+                  { id: "d", text: "Fermentation", isCorrect: false },
+                ],
+              },
+            ],
+          },
+          "World Capitals": {
+            medium: [
+              {
+                text: "What is the capital of Egypt?",
+                options: [
+                  { id: "a", text: "Cairo", isCorrect: true },
+                  { id: "b", text: "Alexandria", isCorrect: false },
+                  { id: "c", text: "Giza", isCorrect: false },
+                  { id: "d", text: "Luxor", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of South Africa?",
+                options: [
+                  { id: "a", text: "Pretoria", isCorrect: true },
+                  { id: "b", text: "Cape Town", isCorrect: false },
+                  { id: "c", text: "Johannesburg", isCorrect: false },
+                  { id: "d", text: "Durban", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Turkey?",
+                options: [
+                  { id: "a", text: "Ankara", isCorrect: true },
+                  { id: "b", text: "Istanbul", isCorrect: false },
+                  { id: "c", text: "Izmir", isCorrect: false },
+                  { id: "d", text: "Antalya", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of India?",
+                options: [
+                  { id: "a", text: "New Delhi", isCorrect: true },
+                  { id: "b", text: "Mumbai", isCorrect: false },
+                  { id: "c", text: "Bangalore", isCorrect: false },
+                  { id: "d", text: "Chennai", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Russia?",
+                options: [
+                  { id: "a", text: "Moscow", isCorrect: true },
+                  { id: "b", text: "Saint Petersburg", isCorrect: false },
+                  { id: "c", text: "Kazan", isCorrect: false },
+                  { id: "d", text: "Sochi", isCorrect: false },
+                ],
+              },
+            ],
+            hard: [
+              {
+                text: "What is the capital of Kazakhstan?",
+                options: [
+                  { id: "a", text: "Astana (Nur-Sultan)", isCorrect: true },
+                  { id: "b", text: "Almaty", isCorrect: false },
+                  { id: "c", text: "Shymkent", isCorrect: false },
+                  { id: "d", text: "Aktobe", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of New Zealand?",
+                options: [
+                  { id: "a", text: "Wellington", isCorrect: true },
+                  { id: "b", text: "Auckland", isCorrect: false },
+                  { id: "c", text: "Christchurch", isCorrect: false },
+                  { id: "d", text: "Hamilton", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Nigeria?",
+                options: [
+                  { id: "a", text: "Abuja", isCorrect: true },
+                  { id: "b", text: "Lagos", isCorrect: false },
+                  { id: "c", text: "Kano", isCorrect: false },
+                  { id: "d", text: "Ibadan", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Switzerland?",
+                options: [
+                  { id: "a", text: "Bern", isCorrect: true },
+                  { id: "b", text: "Zurich", isCorrect: false },
+                  { id: "c", text: "Geneva", isCorrect: false },
+                  { id: "d", text: "Basel", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Saudi Arabia?",
+                options: [
+                  { id: "a", text: "Riyadh", isCorrect: true },
+                  { id: "b", text: "Jeddah", isCorrect: false },
+                  { id: "c", text: "Mecca", isCorrect: false },
+                  { id: "d", text: "Dammam", isCorrect: false },
+                ],
+              },
+            ],
+            easy: [
+              {
+                text: "What is the capital of France?",
+                options: [
+                  { id: "a", text: "Paris", isCorrect: true },
+                  { id: "b", text: "Rome", isCorrect: false },
+                  { id: "c", text: "Berlin", isCorrect: false },
+                  { id: "d", text: "Madrid", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Japan?",
+                options: [
+                  { id: "a", text: "Tokyo", isCorrect: true },
+                  { id: "b", text: "Beijing", isCorrect: false },
+                  { id: "c", text: "Seoul", isCorrect: false },
+                  { id: "d", text: "Bangkok", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Australia?",
+                options: [
+                  { id: "a", text: "Canberra", isCorrect: true },
+                  { id: "b", text: "Sydney", isCorrect: false },
+                  { id: "c", text: "Melbourne", isCorrect: false },
+                  { id: "d", text: "Brisbane", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Canada?",
+                options: [
+                  { id: "a", text: "Ottawa", isCorrect: true },
+                  { id: "b", text: "Toronto", isCorrect: false },
+                  { id: "c", text: "Vancouver", isCorrect: false },
+                  { id: "d", text: "Montreal", isCorrect: false },
+                ],
+              },
+              {
+                text: "What is the capital of Brazil?",
+                options: [
+                  { id: "a", text: "Brasília", isCorrect: true },
+                  { id: "b", text: "Rio de Janeiro", isCorrect: false },
+                  { id: "c", text: "São Paulo", isCorrect: false },
+                  { id: "d", text: "Salvador", isCorrect: false },
+                ],
+              },
+            ],
+          },
           "Web Development": {
             easy: [
               {
