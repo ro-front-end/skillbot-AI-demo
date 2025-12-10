@@ -59,11 +59,11 @@ export default function ThemesPage() {
 
       <div className="pt-32 pb-12 px-6">
         <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
           <button
             onClick={() => router.back()}
             className="mb-8 px-4 py-2 bg-purple/20 border border-purple border-opacity-50 rounded-lg hover:bg-purple/30 transition-colors flex items-center space-x-2"
@@ -112,6 +112,7 @@ export default function ThemesPage() {
                   </motion.div>
                 ))}
               </motion.div>
+              </div>
             </>
           ) : (
             <div className="text-center text-gray-400">Theme not found</div>
