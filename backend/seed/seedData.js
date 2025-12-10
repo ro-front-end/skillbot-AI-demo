@@ -520,6 +520,7 @@ const seedData = async () => {
               },
             ],
           },
+          Art: {
             medium: [
               {
                 text: "Which artist is known for the painting 'The Persistence of Memory'?",
